@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recomendaciones de Productos - ElenaWeb</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Definición de colores */
+        :root {
+            --color-primary: #960D1F; /* El color principal que pediste */
+            --color-secondary: #f4f7f6; /* Gris muy claro para fondo */
+            --color-accent: #d4af37; /* Dorado para acentos y botones */
+            --color-text: #333;
+            --color-light-text: #ffffff;
+            --color-card-bg: #ffffff;
+            --color-shadow: rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Estilos generales */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            background-color: var(--color-secondary);
+            color: var(--color-text);
+            line-height: 1.6;
+        }
+        
+        .main-header {
+            background-color: var(--color-primary);
+            color: var(--color-light-text);
+            text-align: center;
+            padding: 3rem 1rem;
+            box-shadow: 0 4px 8px var(--color-shadow);
+        }
+        
+        .main-header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5em;
+            margin: 0;
+        }
+        
+        .main-header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        /* Estilos de las tarjetas de producto */
+        .product-card {
+            background-color: var(--color-card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px var(--color-shadow);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            transition: transform 0.2s ease-in-out;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px var(--color-shadow);
+        }
+        
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .product-card h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--color-primary);
+            font-size: 1.5em;
+            margin: 0 0 0.5rem;
+        }
+        
+        .product-card p {
+            flex-grow: 1; /* Para que todos los párrafos tengan la misma altura */
+        }
+        
+        /* Estilos del botón */
+        .buy-button {
+            display: inline-block;
+            background-color: var(--color-accent);
+            color: var(--color-primary);
+            padding: 12px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        
+        .buy-button:hover {
+            background-color: #c0a14b; /* Tono de dorado más oscuro */
+        }
+        
+        /* Estilos del pie de página */
+        .main-footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--color-primary);
+            color: var(--color-light-text);
+            margin-top: 3rem;
+        }
+        
+        .main-footer a {
+            color: var(--color-accent);
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        
+        .main-footer a:hover {
+            color: var(--color-light-text);
+        }
+        
+        /* Media query para móviles */
+        @media (max-width: 768px) {
+            .main-header h1 {
+                font-size: 2em;
+            }
+            .product-card {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <h1><i class="fas fa-shopping-bag"></i> Tienda de Productos de Elena</h1>
+        <p>Mis selecciones de Amazon para potenciar tu día a día.</p>
+    </header>
+
+    <main class="container">
+        <section class="products-grid">
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300" alt="Producto 1">
+                <div class="product-info">
+                    <h3>Auriculares Inalámbricos</h3>
+                    <p>Estos auriculares son perfectos para concentrarse. Tienen un sonido envolvente y una batería de larga duración.</p>
+                    <a href="TU_ENLACE_DE_AFILIADO_AQUI" target="_blank" class="buy-button">Comprar en Amazon</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300" alt="Producto 2">
+                <div class="product-info">
+                    <h3>Ratón Ergonómico</h3>
+                    <p>Un ratón cómodo es crucial para largas horas de trabajo. Este modelo reduce la tensión en la muñeca.</p>
+                    <a href="TU_ENLACE_DE_AFILIADO_AQUI" target="_blank" class="buy-button">Comprar en Amazon</a>
+                </div>
+            </div>
+            </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 ElenaWeb. Todos los derechos reservados.</p>
+        <p>
+            <a href="https://instagram.com/@elopezm160894" target="_blank"><i class="fab fa-instagram"></i> Instagram</a> |
+            <a href="https://wa.me/+584245723424" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </p>
+    </footer>
+
+</body>
+</html>
